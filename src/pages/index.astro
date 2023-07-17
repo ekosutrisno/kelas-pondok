@@ -1,12 +1,18 @@
 ---
-import TheHeader from "../components/TheHeader.astro";
 import TheJumbotron from "../components/TheJumbotron.astro";
+import TheFooter from "../components/TheFooter.astro";
 import Layout from "../layouts/Layout.astro";
+import TheMainFeature from "@/components/TheMainFeature.astro";
+import TheFeatureDetail from "@/components/TheFeatureDetail.astro";
+import TheCta from "@/components/TheCta.astro";
 ---
 
 <Layout title="Kelas Pondok - Al-Quran Digital">
-	<TheHeader />
 	<main>
 		<TheJumbotron />
+		<TheMainFeature />
+		<TheFeatureDetail />
+		<TheCta />
 	</main>
+	<TheFooter />
 </Layout>
