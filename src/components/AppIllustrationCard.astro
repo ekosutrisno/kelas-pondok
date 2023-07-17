@@ -1,0 +1,18 @@
+---
+import home_page from '@/assets/images/home_page.webp';
+import home_page_dark from '@/assets/images/home_page_dark.webp';
+import { Image } from 'astro:assets';
+
+---
+
+<div class="w-full px-4 md:px-0">
+    <div class="hidden md:block tilt md:mx-auto w-full md:max-w-screen-lg bg-white rounded-xl ring-1 ring-primary-300 shadow-xl shadow-slate-700/10 overflow-hidden">
+        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt="Dashboard App Light" />
+        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt="Dashboard App Dark" />
+    </div>
+    
+    <div class="md:hidden w-full bg-white rounded-xl ring-1 ring-primary-300 shadow-xl shadow-slate-700/10 overflow-hidden">
+        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt="Dashboard App Light" />
+        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt="Dashboard App Dark" />
+    </div>
+</div>

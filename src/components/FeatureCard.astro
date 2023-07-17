@@ -1,7 +1,11 @@
-<div data-tilt class="hidden tilt p-6 md:flex flex-col bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+---
+const {classes} = Astro.props;
+---
+
+<div data-tilt class:list={[classes]} class="hidden tilt p-6 md:flex flex-col bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <slot/>
  </div>
  
-<div class="md:hidden p-6 flex flex-col bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+<div class:list={[classes]} class="md:hidden p-6 flex flex-col bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
     <slot/>
  </div>
