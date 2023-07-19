@@ -1,20 +1,23 @@
 ---
 import home_page from '@/assets/images/home_page.webp';
 import home_page_dark from '@/assets/images/home_page_dark.webp';
-
+import cat_3 from '@/assets/svg/cat_3.svg';
 import { Image } from "astro:assets";
 import Segment from "./Segment.astro";
-
 ---
 
-<section id="cta-img-trigger" class="py-14 bg-[url(/svg/hero-pattern.svg)] dark:bg-[url(/svg/hero-pattern-dark.svg)] bg-center">
+<section id="cta-img-trigger" class="group relative py-14 bg-[url(/svg/hero-pattern.svg)] dark:bg-[url(/svg/hero-pattern-dark.svg)] bg-center">
+    <div class="pl-10 hidden md:flex justify-start absolute inset-x-0 overflow-hidden">
+        <Image class="h-20 w-20 group-hover:translate-x-0 transition-transform duration-700 -translate-x-[150%] object-cover object-center" src={cat_3} alt="Cat Hallo" />
+    </div>
+
     <Segment
         title="YUK BERGABUNG"
         subTitle="Sekolah dan Pondok Pesantren" 
         shortDescription="Mendukung open source aplikasi dengan cara menggunakan dan menyebarkan luaskan"
     />
 
-    <div class="max-w-7xl mx-auto relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl shadow-slate-700/20 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:pt-0 xl:px-24 dark:ring-1 ring-slate-800">
+    <div class="max-w-7xl mt-16 mx-auto relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl shadow-slate-700/20 sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:pt-0 xl:px-24 dark:ring-1 ring-slate-800">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" class="absolute top-1/2 left-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:translate-y-0 lg:-translate-x-1/2" aria-hidden="true"><circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fill-opacity="0.7"></circle><defs><radialGradient id="759c1415-0410-454c-8f7c-9a820de03641"><stop stop-color="#6D79E5"></stop><stop offset="1" stop-color="#9B6DE5"></stop></radialGradient></defs></svg>
         <div class="absolute inset-0 translate-x-24 translate-y-16">
             <img alt="" src="/svg/grid-skew.svg" class="h-full w-full -rotate-[7deg] object-cover opacity-30"></div>
