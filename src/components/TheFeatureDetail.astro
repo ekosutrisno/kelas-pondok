@@ -9,36 +9,41 @@ import profile_light from '@/assets/images/profile_light.webp';
 import profile_dark from '@/assets/images/profile_dark.webp';
 import surah_light from '@/assets/images/surah_light.webp';
 import surah_dark from '@/assets/images/surah_dark.webp';
+import cat_2 from '@/assets/svg/cat_2.svg';
 
 import { Image } from "astro:assets";
 import Segment from "./Segment.astro";
 
 ---
-
-<section class="py-14 bg-gradient-to-b from-gray-50 to to-gray-50 via-purple-50/10 dark:from-gray-950 dark:to-gray-900">
+<section class="group bg-[url(/svg/hero-pattern.svg)] dark:bg-[url(/svg/hero-pattern-dark.svg)] bg-center relative py-14">
     <Segment
         title="GAMBAR PREVIEW FITUR"
         subTitle="UI interface yang simple dan moderen" 
         shortDescription="Setiap halaman fitur didesain dengan tampilan yang user friendly dan mudah diingat olehmu"
     />
+
+    <div class="pr-8 hidden md:flex justify-end absolute inset-x-0 overflow-hidden">
+        <Image class="h-20 w-20 rotate-12 group-hover:translate-x-0 transition-transform duration-500 translate-x-[150%] object-cover object-center" src={cat_2} alt="Cat Hallo" />
+    </div>
+
     <div class="mt-16 max-w-screen-xl mx-auto space-y-16 md:space-y-32">
         <!-- Beranda -->
         <div class="relative grid gap-4 gap-y-10 md:gap-y-0 grid-cols-1 md:grid-cols-2">
             <div id="trigger-beranda" class="absolute -top-52"></div>
             <div class="px-4">
-                <div id="target-beranda" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/10">
+                <div id="target-beranda" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/5">
                     <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt="Dashboard App Light" />
                     <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt="Dashboard App Dark" />
                 </div>
             </div>
             <div class="px-4 col-start-1 md:col-start-2">
                 <div class="flex flex-col items-start space-y-4">
-                    <div id="target-icon-beranda" class="w-14 h-14 flex flex-col items-center justify-center rounded-xl border-[1.5px] border-purple-400 bg-purple-100">
+                    <div class="w-14 h-14 flex flex-col items-center justify-center rounded-xl border-[1.5px] border-purple-400 bg-purple-100">
                         <svg class="text-purple-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M15 18H9m12.636-5.042l-.279 1.937c-.487 3.388-.731 5.081-1.906 6.093C18.276 22 16.553 22 13.106 22h-2.212c-3.447 0-5.17 0-6.345-1.012c-1.175-1.012-1.419-2.705-1.906-6.093l-.279-1.937c-.38-2.637-.57-3.956-.029-5.083c.54-1.127 1.691-1.813 3.992-3.183l1.385-.825C9.8 2.622 10.846 2 12 2c1.154 0 2.199.622 4.288 1.867l1.385.825c2.3 1.37 3.451 2.056 3.992 3.183"/></svg>
                     </div>
                     <div class="text-2xl md:text-3xl tracking-wide font-semibold dark:text-gray-200">Beranda</div>
                     <p class="my-6 md:text-lg font-light text-gray-700 leading-7 tracking-wide dark:text-gray-200">Halaman utama yang berisi berbagai menu Al-Quran Digital yang tersedia </p>
-                    <ul class="flex flex-col gap-3">
+                    <ul id="target-beranda-feat" class="flex flex-col gap-3">
                         <li class="inline-flex items-center space-x-2 font-light dark:text-gray-300">
                             <svg class="w-5 h-5 text-purple-500 dark:text-purple-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m8.5 12.5l2 2l5-5"/><path d="M7 3.338A9.954 9.954 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
                             <span>Bacaanku</span>
@@ -69,12 +74,12 @@ import Segment from "./Segment.astro";
             <div id="trigger-profile" class="absolute -top-52"></div>
             <div class="px-4 row-start-2 md:row-auto">
                 <div class="flex flex-col items-start space-y-4">
-                    <div id="target-icon-profile" class="w-14 h-14 flex flex-col items-center justify-center rounded-xl border-[1.5px] border-blue-400 bg-blue-100">
+                    <div class="w-14 h-14 flex flex-col items-center justify-center rounded-xl border-[1.5px] border-blue-400 bg-blue-100">
                         <svg class="text-blue-600" aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="2"/><path d="M16 15c0 1.105 0 2-4 2s-4-.895-4-2s1.79-2 4-2s4 .895 4 2Z"/><path stroke-linecap="round" d="M3 10.417c0-3.198 0-4.797.378-5.335c.377-.537 1.88-1.052 4.887-2.081l.573-.196C10.405 2.268 11.188 2 12 2c.811 0 1.595.268 3.162.805l.573.196c3.007 1.029 4.51 1.544 4.887 2.081C21 5.62 21 7.22 21 10.417v1.574c0 2.505-.837 4.437-2 5.913M3.193 14c.857 4.298 4.383 6.513 6.706 7.527c.721.315 1.082.473 2.101.473c1.02 0 1.38-.158 2.101-.473c.579-.252 1.231-.58 1.899-.994"/></g></svg>
                     </div>
                     <div class="text-2xl md:text-3xl tracking-wide font-semibold dark:text-gray-200">Profile</div>
                     <p class="my-6 md:text-lg font-light text-gray-700 leading-7 tracking-wide dark:text-gray-200">Pengaturan semua hal yang berhubungan dengan akun dan preferensi pengguna</p>
-                    <ul class="flex flex-col gap-3">
+                    <ul id="target-profile-feat" class="flex flex-col gap-3">
                         <li class="inline-flex items-center space-x-2 font-light dark:text-gray-300">
                             <svg class="w-5 h-5 text-blue-500 dark:text-blue-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m8.5 12.5l2 2l5-5"/><path d="M7 3.338A9.954 9.954 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
                             <span>Update profile</span>
@@ -99,7 +104,7 @@ import Segment from "./Segment.astro";
                 </div>
             </div>
             <div class="px-4">
-                <div id="target-profile" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/10">
+                <div id="target-profile" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/5">
                     <Image class="h-full w-full object-cover object-center dark:hidden" src={profile_light} alt="Dashboard App Light" />
                     <Image class="h-full w-full object-cover object-center hidden dark:block" src={profile_dark} alt="Dashboard App Dark" />
                 </div>
@@ -110,7 +115,7 @@ import Segment from "./Segment.astro";
         <div class="relative grid gap-4 gap-y-10 md:gap-y-0 grid-cols-1 md:grid-cols-2">
             <div id="trigger-bacaanku" class="absolute -top-52"></div>
             <div class="px-4">
-                <div id="target-bacaanku" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/10">
+                <div id="target-bacaanku" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/5">
                        <Image class="h-full w-full object-cover object-center dark:hidden" src={bacaan_light} alt="Dashboard App Light" />
                         <Image class="h-full w-full object-cover object-center hidden dark:block" src={bacaan_dark} alt="Dashboard App Dark" />
                 </div>
@@ -122,7 +127,7 @@ import Segment from "./Segment.astro";
                     </div>
                     <div class="text-2xl md:text-3xl tracking-wide font-semibold dark:text-gray-200">Bacaanku</div>
                     <p class="my-6 md:text-lg font-light text-gray-700 leading-7 tracking-wide dark:text-gray-200">Bacaan terakhir pengguna akan ada di halaman ini, dan pengguna bisa melanjutkan bacaan selanjutnya secara langsung</p>
-                    <ul class="flex flex-col gap-3">
+                    <ul id="target-bacaanku-feat" class="flex flex-col gap-3">
                         <li class="inline-flex items-center space-x-2 font-light dark:text-gray-300">
                             <svg class="w-5 h-5 text-pink-500 dark:text-pink-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m8.5 12.5l2 2l5-5"/><path d="M7 3.338A9.954 9.954 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
                             <span>Nama surat terakhir</span>
@@ -150,7 +155,7 @@ import Segment from "./Segment.astro";
                     </div>
                     <div class="text-2xl md:text-3xl tracking-wide font-semibold dark:text-gray-200">Surah</div>
                     <p class="my-6 md:text-lg font-light text-gray-700 leading-7 tracking-wide dark:text-gray-200">Daftar isi dari semua surah yang dapat kamu cari secara langsung dengan informasi surat yang lengkap</p>
-                    <ul class="flex flex-col gap-3">
+                    <ul id="target-surat-feat" class="flex flex-col gap-3">
                         <li class="inline-flex items-center space-x-2 font-light dark:text-gray-300">
                             <svg class="w-5 h-5 text-sky-500 dark:text-sky-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m8.5 12.5l2 2l5-5"/><path d="M7 3.338A9.954 9.954 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
                             <span>Daftar semua surah</span>
@@ -167,7 +172,7 @@ import Segment from "./Segment.astro";
                 </div>
             </div>
             <div class="px-4">
-                <div id="target-surat" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/10">
+                <div id="target-surat" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/5">
                     <Image class="h-full w-full object-cover object-center dark:hidden" src={surah_light} alt="Dashboard App Light" />
                     <Image class="h-full w-full object-cover object-center hidden dark:block" src={surah_dark} alt="Dashboard App Dark" />
                 </div>
@@ -178,7 +183,7 @@ import Segment from "./Segment.astro";
         <div class="relative grid gap-4 gap-y-10 md:gap-y-0 grid-cols-1 md:grid-cols-2">
             <div id="trigger-kelas" class="absolute -top-52"></div> 
             <div class="px-4">
-                <div id="target-kelas" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/10">
+                <div id="target-kelas" class="rounded-xl overflow-hidden border border-gray-200 dark:border-slate-700/75 shadow-xl shadow-slate-700/5">
                     <Image class="h-full w-full object-cover object-center dark:hidden" src={class_detail_light} alt="Dashboard App Light" />
                     <Image class="h-full w-full object-cover object-center hidden dark:block" src={class_detail_dark} alt="Dashboard App Dark" />
                 </div>
@@ -190,7 +195,7 @@ import Segment from "./Segment.astro";
                         </div>
                     <div class="text-2xl md:text-3xl tracking-wide font-semibold dark:text-gray-200">Ruang Kelas (Beta)</div>
                     <p class="my-6 md:text-lg font-light text-gray-700 leading-7 tracking-wide dark:text-gray-200">Pengguna dapat membuat ruang kelas dan mengundang teman untuk bergabung, fitur ini masih dalam tahap pengembangan</p>
-                    <ul class="flex flex-col gap-3">
+                    <ul id="target-kelas-feat" class="flex flex-col gap-3">
                         <li class="inline-flex items-center space-x-2 font-light dark:text-gray-300">
                             <svg class="w-5 h-5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path stroke-linejoin="round" d="m8.5 12.5l2 2l5-5"/><path d="M7 3.338A9.954 9.954 0 0 1 12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12c0-1.821.487-3.53 1.338-5"/></g></svg>
                             <span>Membuat ruang kelas</span>
