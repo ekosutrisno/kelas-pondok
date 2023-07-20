@@ -1,5 +1,9 @@
 ---
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 import AppIllustrationCard from "./AppIllustrationCard.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <section class="relative bg-gray-100 dark:bg-gray-900 pt-16">
@@ -9,25 +13,25 @@ import AppIllustrationCard from "./AppIllustrationCard.astro";
         <div class="my-10 w-full flex items-center justify-center">
             <a href="#" class="flex items-center space-x-1">
                 <svg class="text-primary-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M9 13h2v-2.75h2V13h2V8.25l-3-2l-3 2V13Zm3 8.325q-.35 0-.7-.125t-.625-.375Q9.05 19.325 7.8 17.9t-2.087-2.762q-.838-1.338-1.275-2.575T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 1.125-.438 2.363t-1.275 2.575Q17.45 16.475 16.2 17.9t-2.875 2.925q-.275.25-.625.375t-.7.125Z"/></svg>
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kelas Pondok</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{t('brand.org')}</span>
             </a>
         </div>
         
-        <h1 class="tracking-wide text-[2.5rem] font-bold text-slate-800 md:text-5xl lg:text-7xl dark:text-white"><span class="hidden sm:inline">Aplikasi</span> Al-Quran Digital</h1>
-        <p class="my-6 text-lg font-light text-gray-700 lg:max-w-3xl lg:text-xl xl:text-2xl leading-7 tracking-wide mx-auto dark:text-gray-200">Al-Quran Digital adalah aplikasi open source dengan berbagai fitur mudah dan tampilan desain moderen. </p>
+        <h1 class="tracking-wide text-[2.5rem] font-bold text-slate-800 md:text-5xl lg:text-7xl dark:text-white"><span class="hidden sm:inline">{t('hero.application')}</span> {t('brand.app')}</h1>
+        <p class="my-6 text-lg font-light text-gray-700 lg:max-w-3xl lg:text-xl xl:text-2xl leading-7 tracking-wide mx-auto dark:text-gray-200">{t('hero.description')}</p>
         
         <!-- CTA -->
         <div class="mt-10 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
             <a href="https://alquran-digital.vercel.app/" target="_self" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">
-                Mulai Aplikasi
+                {t('hero.cta.app')}
                 <svg class="w-6 h-6 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M2.67 10.73a3.52 3.52 0 0 0-.94 1.93a5 5 0 0 0-.07 1.1v.58h.8a5.05 5.05 0 0 0 .88-.08a3.46 3.46 0 0 0 1.93-.94a1.76 1.76 0 0 0-.14-2.48a1.76 1.76 0 0 0-2.46-.11zm1.74 1.73a2.26 2.26 0 0 1-1.26.6h-.22v-.22a2.26 2.26 0 0 1 .6-1.26a.36.36 0 0 1 .24-.08a.67.67 0 0 1 .47.22a.54.54 0 0 1 .17.74zM14.65 2.24a.91.91 0 0 0-.89-.89A8.75 8.75 0 0 0 7.27 3.5L5.64 5.4l-2.4-.5a1 1 0 0 0-.92.27l-.68.68a1 1 0 0 0-.28.81a1 1 0 0 0 .45.74l2.06 1.32l.13.08l3.2 3.25l.08.08l1.32 2.06a1 1 0 0 0 .74.45h.11a1 1 0 0 0 .7-.29l.68-.68a1 1 0 0 0 .27-.92l-.5-2.39l1.84-1.58a8.79 8.79 0 0 0 2.21-6.54zM3.11 6.15l1.32.28l-.64.75l-1-.67zm6.38 7.1l-.67-1l.75-.64l.28 1.32zm2.39-5.11l.18.17zm-.28-.28L7.92 11L5 8.08L8.14 4.4a7.44 7.44 0 0 1 5.26-1.8a7.48 7.48 0 0 1-1.8 5.26z"/><path fill="currentColor" d="M11.13 6.63a1.19 1.19 0 0 0-.06-1.7a1.16 1.16 0 1 0-1.64 1.63a1.2 1.2 0 0 0 1.7.07z"/></svg>
             </a>
             <a href="https://alquran-digital.vercel.app/doc" target="_parent" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-slate-800 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
-                Tentang Kami
+                {t('hero.cta.about')}
             </a>  
         </div>
         <a href="#" class="mt-10 inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-primary-700 bg-primary-100 rounded-full dark:bg-primary-900 dark:text-primary-300 hover:bg-primary-200 dark:hover:bg-primary-800">
-            <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">Beta</span> <span class="text-sm font-medium">Publik beta akses</span> 
+            <span class="text-xs bg-primary-600 rounded-full text-white px-4 py-1.5 mr-3">{t('hero.info.flag')}</span> <span class="text-sm font-medium">{t('hero.info.text')}</span> 
             <svg class="w-2.5 h-2.5 ml-2 hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
             </svg>

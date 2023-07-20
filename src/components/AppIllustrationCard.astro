@@ -3,6 +3,11 @@ import home_page from '@/assets/images/home_page.webp';
 import home_page_dark from '@/assets/images/home_page_dark.webp';
 import cat_1 from '@/assets/svg/cat_1.svg';
 import { Image } from 'astro:assets';
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <div class="w-full px-4 md:px-0 group relative">
@@ -10,12 +15,12 @@ import { Image } from 'astro:assets';
         <Image class="h-20 w-20 rotate-12 group-hover:translate-x-0 transition-transform duration-500 -translate-x-[150%] object-cover object-center" src={cat_1} alt="Cat Hallo" />
     </div>
     <div class="hidden md:block tilt md:mx-auto w-full md:max-w-screen-lg bg-white rounded-xl ring-1 ring-primary-300 shadow-xl shadow-slate-700/10 overflow-hidden">
-        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt="Dashboard App Light" />
-        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt="Dashboard App Dark" />
+        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt={t('hero.img.alt.light')} />
+        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt={t('hero.img.alt.dark')}/>
     </div>
     
     <div class="md:hidden w-full bg-white rounded-xl ring-1 ring-primary-300 shadow-xl shadow-slate-700/10 overflow-hidden">
-        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt="Dashboard App Light" />
-        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt="Dashboard App Dark" />
+        <Image class="h-full w-full object-cover object-center dark:hidden" src={home_page} alt={t('hero.img.alt.light')} />
+        <Image class="h-full w-full object-cover object-center hidden dark:block" src={home_page_dark} alt={t('hero.img.alt.dark')}/>
     </div>
 </div>
