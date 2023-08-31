@@ -1,12 +1,15 @@
 ---
 import Segment from "./Segment.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 <section class="relative w-full py-16 lg:py-20 bg-gradient-to-b from-gray-50 to to-gray-100 dark:from-gray-900 dark:to-gray-950">
     <Segment
-        title="TEKNOLOGI"
-        subTitle="Dibangun dengan teknologi web terbaru" 
-        shortDescription="Untuk menghasilkan produk applikasi yang handal perlu digunakan teknologi terbaru yang mumpuni"
+        title={t('tech.segment.title')}
+        subTitle={t('tech.segment.subTitle')}
+        shortDescription={t('tech.segment.description')}
     />
 
     <div aria-hidden="true"  class="absolute top-0 left-56 h-20 w-20 rounded-full bg-sky-400/10">
@@ -25,11 +28,9 @@ import Segment from "./Segment.astro";
             </div>
             <div class="ml-6 lg:ml-0 lg:mt-10">
                 <h3 class="transition-colors group-hover:text-yellow-400 dark:group-hover:text-yellow-300 text-xl font-bold text-slate-800 dark:text-gray-300 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                    Firebase
+                    {t('tech.firebase.title')}
                 </h3>
-                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">
-                    Firebase merupakan salah satu produk Cloud dari Google untuk pengembangan aplikasi.
-                </h4>
+                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">{t('tech.firebase.description')}</h4>
             </div>
         </li>
         <li class="group flex-start relative flex [counter-increment:steps] lg:flex-col">
@@ -39,11 +40,9 @@ import Segment from "./Segment.astro";
             </div>
             <div class="ml-6 lg:ml-0 lg:mt-10">
                 <h3 class="transition-colors group-hover:text-green-400 dark:group-hover:text-green-300 text-xl font-bold text-slate-800 dark:text-gray-300 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                    Vue
+                    {t('tech.vue.title')}
                 </h3>
-                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">
-                    Progresif Framework JavaScript untuk mengembangkan applikasi web interaktif.
-                </h4>
+                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">{t('tech.vue.description')}</h4>
             </div>
         </li>
         <li class="group flex-start relative flex [counter-increment:steps] lg:flex-col">
@@ -53,11 +52,9 @@ import Segment from "./Segment.astro";
             </div>
             <div class="ml-6 lg:ml-0 lg:mt-10">
                 <h3 class="transition-colors group-hover:text-cyan-500 dark:group-hover:text-cyan-300 text-xl font-bold text-slate-800 dark:text-gray-300 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                    Tailwind
+                    {t('tech.tailwind.title')}
                 </h3>
-                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">
-                    Tailwind CSS merupakan salah satu framewok CSS berbasis utility class paling popular saat ini.
-                </h4>
+                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">{t('tech.tailwind.description')}</h4>
             </div>
         </li>
         <li class="flex-start group relative flex [counter-increment:steps] lg:flex-col">
@@ -67,11 +64,9 @@ import Segment from "./Segment.astro";
             </div>
             <div class="ml-6 lg:ml-0 lg:mt-10">
                 <h3 class="text-xl font-bold text-slate-800 dark:text-gray-300 before:mb-2 before:block before:font-mono before:text-sm before:text-gray-500">
-                    Vercel
+                    {t('tech.vercel.title')}
                 </h3>
-                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">
-                    Platform cloud untuk aplikasi web statis dan fungsi serverless, yang menawarkan kemudahan deployment.
-                </h4>
+                <h4 class="mt-2 text-base text-gray-700 dark:text-gray-400">{t('tech.vercel.description')}</h4>
             </div>
         </li>
     </ul>

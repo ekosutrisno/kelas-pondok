@@ -1,9 +1,13 @@
 import { defineConfig } from 'astro/config';
 import tailwind from "@astrojs/tailwind";
+import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
-  integrations: [tailwind()]
+  integrations: [tailwind(), partytown(
+    {
+      config: {
+        forward: ["dataLayer.push"],
+      },
+    }
+  )]
 });

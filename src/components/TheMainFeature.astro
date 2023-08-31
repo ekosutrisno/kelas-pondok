@@ -1,13 +1,18 @@
 ---
 import FeatureCard from "./FeatureCard.astro";
 import Segment from "./Segment.astro";
+import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 ---
 
 <section class="w-full pt-16 lg:pt-20 bg-gradient-to-b from-gray-100 to to-gray-50 dark:from-gray-900 dark:to-gray-900">
     <Segment
-        title="FITUR UNGGULAN"
-        subTitle="Fitur mudah yang to the point" 
-        shortDescription="Kamu langsung dapat dengan mudah menggunakan aplikasi tanpa harus ribet mikir banyak"
+        title={t('feat.segment.title')}
+        subTitle={t('feat.segment.subTitle')}
+        shortDescription={t('feat.segment.description')}
     />
 
     <div class="relative grid sm:grid-cols-2 md:grid-cols-3 gap-4 py-8 px-4 mx-auto max-w-screen-xl text-center">
@@ -23,9 +28,9 @@ import Segment from "./Segment.astro";
                 <svg class="text-sky-400 dark:text-sky-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6v4.853c0 .29 0 .435-.095.494c-.095.058-.224-.007-.484-.136l-1.242-.622c-.088-.043-.132-.065-.179-.065c-.047 0-.091.022-.179.065l-1.242.622c-.26.13-.39.194-.484.136c-.095-.06-.095-.204-.095-.494V6"/><path stroke-linecap="round" d="M22 11.798c0-2.632 0-3.949-.77-4.804a2.984 2.984 0 0 0-.224-.225C20.151 6 18.834 6 16.202 6h-.374c-1.153 0-1.73 0-2.268-.153a4 4 0 0 1-.848-.352C12.224 5.224 11.816 4.815 11 4l-.55-.55c-.274-.274-.41-.41-.554-.53a4 4 0 0 0-2.18-.903C7.53 2 7.336 2 6.95 2c-.883 0-1.324 0-1.692.07A4 4 0 0 0 2.07 5.257C2 5.626 2 6.068 2 6.95M21.991 16c-.036 2.48-.22 3.885-1.163 4.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14v-3"/></g></svg>
             </div>
             <div class="flex-1 text-left">
-                <h5 class="mb-2 text-2xl group-hover:text-sky-400 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">Metadata Terkelompok</h5>
+                <h5 class="mb-2 text-2xl group-hover:text-sky-400 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">{t('feat.card.meta.title')}</h5>
                 <p class="text-gray-500 dark:text-gray-400">
-                    Metadata Al-quran yang telah dikelompokkan berdasarkan, Surah, Halaman, Manzil, Rukuk, Sajda, dan Juz.
+                    {t('feat.card.meta.description')}
                 </p>
             </div>
         </FeatureCard>
@@ -34,8 +39,8 @@ import Segment from "./Segment.astro";
                <svg class="text-purple-400 dark:text-purple-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11.146 11.023c.38-.682.57-1.023.854-1.023c.284 0 .474.34.854 1.023l.098.176c.108.194.162.29.246.354c.085.064.19.088.4.135l.19.044c.738.167 1.107.25 1.195.532c.088.283-.164.577-.667 1.165l-.13.152c-.143.167-.215.25-.247.354c-.032.104-.021.215 0 .438l.02.203c.076.785.114 1.178-.115 1.352c-.23.174-.576.015-1.267-.303l-.178-.082c-.197-.09-.295-.135-.399-.135c-.104 0-.202.045-.399.135l-.178.082c-.691.319-1.037.477-1.267.303c-.23-.174-.191-.567-.115-1.352l.02-.203c.021-.223.032-.334 0-.438c-.032-.103-.104-.187-.247-.354l-.13-.152c-.503-.588-.755-.882-.667-1.165c.088-.282.457-.365 1.195-.532l.19-.044c.21-.047.315-.07.4-.135c.084-.064.138-.16.246-.354l.098-.176Z"/><path stroke-linecap="round" d="M22 11.798c0-2.632 0-3.949-.77-4.804a2.984 2.984 0 0 0-.224-.225C20.151 6 18.834 6 16.202 6h-.374c-1.153 0-1.73 0-2.268-.153a4 4 0 0 1-.848-.352C12.224 5.224 11.816 4.815 11 4l-.55-.55c-.274-.274-.41-.41-.554-.53a4 4 0 0 0-2.18-.903C7.53 2 7.336 2 6.95 2c-.883 0-1.324 0-1.692.07A4 4 0 0 0 2.07 5.257C2 5.626 2 6.068 2 6.95M21.991 16c-.036 2.48-.22 3.885-1.163 4.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14v-3"/></g></svg>
             </div>
             <div class="flex-1 text-left">
-                <h5 class="mb-2 text-2xl group-hover:text-purple-400 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">Riwayat dan Aktivitas</h5>
-                <p class="text-gray-500 dark:text-gray-400">Kamu dapat menyimpan bacaan terakhir, ayat favorit, surah pilihan dan membuat ruang kelas bersama teman-teman kamu.</p>
+                <h5 class="mb-2 text-2xl group-hover:text-purple-400 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">{t('feat.card.activity.title')}</h5>
+                <p class="text-gray-500 dark:text-gray-400">{t('feat.card.activity.description')}</p>
             </div>
         </FeatureCard>
         <FeatureCard classes="hover:ring-2 hover:ring-orange-300 group">
@@ -43,8 +48,8 @@ import Segment from "./Segment.astro";
                 <svg class="text-orange-400 dark:text-orange-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none"><path fill="currentColor" d="m21.067 11.857l-.642-.388l.642.388ZM15.5 14.25a.75.75 0 0 0 0 1.5v-1.5ZM8.25 8.5a.75.75 0 0 0 1.5 0h-1.5Zm3.893-5.567l-.388-.642l.388.642Zm-10.4 12.292a.75.75 0 1 0 1.43-.45l-1.43.45Zm14.882 4.788a.75.75 0 1 0 .75 1.298l-.75-1.298ZM3.987 7.376a.75.75 0 0 0-1.298-.752l1.298.752Zm2.637-4.687a.75.75 0 1 0 .752 1.298l-.752-1.298Zm13.801 8.78A5.746 5.746 0 0 1 15.5 14.25v1.5a7.247 7.247 0 0 0 6.21-3.505l-1.285-.776ZM9.75 8.5a5.747 5.747 0 0 1 2.781-4.925l-.776-1.284A7.246 7.246 0 0 0 8.25 8.5h1.5Zm-6.577 6.275A9.246 9.246 0 0 1 2.75 12h-1.5c0 1.122.172 2.206.492 3.225l1.431-.45ZM21.25 12a9.246 9.246 0 0 1-4.625 8.013l.75 1.298A10.746 10.746 0 0 0 22.75 12h-1.5ZM12 2.75a.384.384 0 0 1-.268-.118a.285.285 0 0 1-.082-.155c-.004-.031-.002-.121.105-.186l.776 1.284c.503-.304.665-.861.606-1.299c-.062-.455-.42-1.026-1.137-1.026v1.5Zm9.71 9.495c-.066.107-.156.109-.187.105a.285.285 0 0 1-.155-.082a.384.384 0 0 1-.118-.268h1.5c0-.717-.571-1.075-1.026-1.137c-.438-.059-.995.103-1.299.606l1.284.776ZM2.75 12c0-1.686.45-3.265 1.237-4.624l-1.298-.752A10.704 10.704 0 0 0 1.25 12h1.5Zm4.626-8.013A9.204 9.204 0 0 1 12 2.75v-1.5c-1.957 0-3.794.524-5.376 1.439l.752 1.298Z"/><path stroke="currentColor" stroke-linecap="round" stroke-width="1.5" d="M10.048 15.142c.387-.13.804-.2 1.238-.2c.425 0 .834.067 1.215.192m-7.175 1.622a2.949 2.949 0 0 0-.54-.05C3.247 16.706 2 17.89 2 19.353C2 20.815 3.247 22 4.786 22h6.5C13.337 22 15 20.42 15 18.47c0-1.544-1.045-2.857-2.5-3.336m-7.175 1.622a3.366 3.366 0 0 1-.23-1.227C5.095 13.58 6.758 12 8.81 12c1.91 0 3.484 1.371 3.69 3.134m-7.175 1.622c.367.068.708.205 1.008.396"/></g></svg>
             </div>
             <div class="flex-1 text-left">
-                <h5 class="mb-2 text-2xl group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">Dark Mode</h5>
-                <p class="text-gray-500 dark:text-gray-400">Bagi kamu yang suka membaca dalam keadaan cahaya yang lebih gelap atau malam hari akan lebih nyaman.</p>
+                <h5 class="mb-2 text-2xl group-hover:text-orange-400 dark:group-hover:text-orange-300 transition-colors font-semibold tracking-tight text-slate-800 dark:text-white">{t('feat.card.dark.title')}</h5>
+                <p class="text-gray-500 dark:text-gray-400">{t('feat.card.dark.description')}</p>
             </div>
         </FeatureCard>
     </div>
