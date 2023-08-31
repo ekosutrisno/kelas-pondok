@@ -3,9 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-  experimental: {
-    assets: true
-  },
   integrations: [tailwind(), partytown(
     {
       config: {
