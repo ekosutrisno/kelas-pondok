@@ -15,16 +15,15 @@ const t = useTranslations(lang);
 <html lang={lang}>
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={t('brand.description')}>
 		<meta
 			name="keywords"
-			content="Alquran Bahasa Indonesia, Baca Alquran, Al-Quran, Alquran Terjemahan, Belajar, Menghafal Alquran, Aplikasi Alquran"
+			content="Al-Quran Bahasa Indonesia, Baca Al-Quran, Al-Quran, Al-Quran Terjemahan, Belajar, Menghafal Al-Quran, Aplikasi Al-Quran"
 		/>
-
+		<link rel="canonical" href={Astro.url.href} />
 		<title>{title}</title>
 		
 		<meta property="og:type" content="website" />
@@ -49,7 +48,7 @@ const t = useTranslations(lang);
 		</button>
 		<script is:inline src="/dark-mode.js"></script>
 		<script is:inline src="/scroll-magic.js"></script>
-		<script>
+		<script lang="js">
 			VanillaTilt.init(document.querySelectorAll(".tilt"),{
 				max: 10,
 				speed:300
