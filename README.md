@@ -1,6 +1,6 @@
 # Al-Quran Digital Home Page
 
-See the App [Al-Quran Digital](https://alquran-digital.vercel.app)
+See the App [Al-Quran Digital](https://app.kelaspondok.com)
 
 ## Light Mode
 
