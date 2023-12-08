@@ -1,7 +1,7 @@
 ---
 import '@/styles/global.css';
-
 import { getLangFromUrl, useTranslations } from '@/i18n/utils';
+import { injectSpeedInsights } from "@vercel/speed-insights"
 interface Props {
 	title: string;
 }
@@ -9,6 +9,8 @@ interface Props {
 const { title } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+injectSpeedInsights({framework: 'astro'});
 ---
 
 <!DOCTYPE html>
