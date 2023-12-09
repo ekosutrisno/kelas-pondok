@@ -6,6 +6,9 @@ import TheMainFeature from "@/components/TheMainFeature.astro";
 import TheFeatureDetail from "@/components/TheFeatureDetail.astro";
 import TheCta from "@/components/TheCta.astro";
 import TheTechStack from "@/components/TheTechStack.astro";
+import { injectSpeedInsights } from "@vercel/speed-insights"
+
+injectSpeedInsights({framework: 'astro'});
 ---
 
 <Layout title="Kelas Pondok - Al-Quran Digital Bahasa Indonesia">
