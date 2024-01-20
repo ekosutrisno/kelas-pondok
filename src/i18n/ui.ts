@@ -88,7 +88,7 @@ export const ui = {
         'cta.imglight': 'Kelas Tampilan Gelap',
         'cta.title': 'Membaca & Menghafal Al-Quran Lebih Mudah dan Sederhana',
         'cta.description': 'Mengelola bacaan dan hafalan Al-Quran lebih mudah dengan fitur personal bacaan, class room, menyimpan ayat favorit, menyimpan surah pilihan, dan juga bisa mendengarkan langsung via audio.',
-        'cta.btn': 'Mulai plikasi',
+        'cta.btn': 'Mulai Aplikasi',
 
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
@@ -188,7 +188,7 @@ export const ui = {
         'cta.imglight': 'Kelas Tampilan Gelap',
         'cta.title': 'Membaca & Menghafal Al-Quran Lebih Mudah dan Sederhana',
         'cta.description': 'Mengelola bacaan dan hafalan Al-Quran lebih mudah dengan fitur personal bacaan, class room, menyimpan ayat favorit, menyimpan surah pilihan, dan juga bisa mendengarkan langsung via audio.',
-        'cta.btn': 'Mulai plikasi',
+        'cta.btn': 'Mulai Aplikasi',
 
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
