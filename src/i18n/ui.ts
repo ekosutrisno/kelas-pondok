@@ -10,7 +10,7 @@ export const ui = {
         // HERO
         'brand.org': 'Kelas Pondok',
         'brand.app': 'Al-Quran Digital',
-        'brand.description': 'Al-quran Digital berbahasa Indonesia yang gratis dan mudah digunakan dengan tampilan yang moderen.',
+        'brand.description': "Kelola bacaan dan hafalan Al-Qur'an dengan mudah! Nikmati fitur Personal Bacaan, Organisasi/Madrasah, Bacaan Terakhir, Ayat Favorit, dan audio Al-Qur'an untuk pengalaman lebih baik.",
 
         'hero.application': 'Aplikasi',
         'hero.description': 'Al-Quran Digital adalah aplikasi open source dengan berbagai fitur mudah dan tampilan desain moderen.',
