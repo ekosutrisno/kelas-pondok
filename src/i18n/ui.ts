@@ -90,6 +90,16 @@ export const ui = {
         'cta.description': 'Mengelola bacaan dan hafalan Al-Quran lebih mudah dengan fitur personal bacaan, class room, menyimpan ayat favorit, menyimpan surah pilihan, dan juga bisa mendengarkan langsung via audio.',
         'cta.btn': 'Mulai Aplikasi',
 
+        // PRICE
+        'price.segment.title': 'HARGA',
+        'price.segment.subTitle': 'Pilih paket yang tepat untuk Anda',
+        'price.segment.description': 'Pilih paket terjangkau yang dilengkapi dengan fitur terbaik untuk menjangkau audiens Anda',
+        'price.segment.cta': 'Pilih paket',
+        'price.segment.month': 'Bulan',
+        'price.segment.note_title': 'Catatan',
+        'price.segment.notes': 'Pengguna baru akan mendapatkan paket Basic secara otomatis untuk mengeksplorasi fitur-fitur aplikasi.',
+        'price.segment.notes_1': 'Periode paket tersedia dalam pilihan Bulanan, Kuartalan, dan Tahunan.',
+
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
         'tech.segment.subTitle': 'Dibangun dengan teknologi web terbaru',
@@ -189,6 +199,16 @@ export const ui = {
         'cta.title': 'Membaca & Menghafal Al-Quran Lebih Mudah dan Sederhana',
         'cta.description': 'Mengelola bacaan dan hafalan Al-Quran lebih mudah dengan fitur personal bacaan, class room, menyimpan ayat favorit, menyimpan surah pilihan, dan juga bisa mendengarkan langsung via audio.',
         'cta.btn': 'Mulai Aplikasi',
+
+        // PRICE
+        'price.segment.title': 'HARGA',
+        'price.segment.subTitle': 'Pilih paket yang tepat untuk Anda',
+        'price.segment.description': 'Pilih paket terjangkau yang dilengkapi dengan fitur terbaik untuk menjangkau audiens Anda',
+        'price.segment.cta': 'Pilih paket',
+        'price.segment.month': 'Bulan',
+        'price.segment.note_title': 'Notes',
+        'price.segment.notes': 'Pengguna baru akan mendapatkan paket Basic secara otomatis untuk mengeksplorasi fitur-fitur aplikasi.',
+        'price.segment.notes_1': 'Subscription periods are available in Monthly, Quarterly, and Annual options.',
 
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
