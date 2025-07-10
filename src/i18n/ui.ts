@@ -99,6 +99,7 @@ export const ui = {
         'price.segment.note_title': 'Catatan',
         'price.segment.notes': 'Pengguna baru akan mendapatkan paket Basic secara otomatis untuk mengeksplorasi fitur-fitur aplikasi.',
         'price.segment.notes_1': 'Periode paket tersedia dalam pilihan Bulanan, Kuartalan, dan Tahunan.',
+        'price.segment.notes_2': 'Harga sudah termasuk PPN.',
 
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
@@ -209,6 +210,7 @@ export const ui = {
         'price.segment.note_title': 'Notes',
         'price.segment.notes': 'Pengguna baru akan mendapatkan paket Basic secara otomatis untuk mengeksplorasi fitur-fitur aplikasi.',
         'price.segment.notes_1': 'Subscription periods are available in Monthly, Quarterly, and Annual options.',
+        'price.segment.notes_2': 'The price includes VAT.',
 
         // TECH
         'tech.segment.title': 'TEKNOLOGI',
